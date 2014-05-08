@@ -2,8 +2,11 @@
 
 class Movie extends Eloquent {
 
-	public function genre()
-	{
+	public static $rules = array(
+			'title' => 'required'
+	);
+
+	public function genre() {
 		return $this->belongsTo('Genre');
 	}
 
