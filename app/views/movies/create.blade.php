@@ -52,9 +52,5 @@
 		{{ Form::textarea('cast') }}
 	</p>
 
-	<p>
-		{{ Form::label('poster') }}
-		{{ Form::file('poster') }}
-	</p>
 	{{ Form::submit('Save movie') }}
 {{ Form::close() }}

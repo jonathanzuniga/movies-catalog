@@ -52,7 +52,6 @@ class MoviesController extends \BaseController {
 		$movie->director = Input::get('director');
 		$movie->duration = Input::get('duration');
 		$movie->genre_id = Input::get('genre_id');
-		$movie->poster = Input::get('poster');
 		$movie->title = Input::get('title');
 		$movie->writers = Input::get('writers');
 		$movie->year = Input::get('year');
@@ -75,7 +74,11 @@ class MoviesController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$genres = array();
+		$movie = Movie::find($id);
+
+		return View::make('movies.show')
+			->with('movie', $movie);
 	}
 
 	/**
@@ -115,7 +118,6 @@ class MoviesController extends \BaseController {
 			$movie->director = Input::get('director');
 			$movie->duration = Input::get('duration');
 			$movie->genre_id = Input::get('genre_id');
-			$movie->poster = Input::get('poster');
 			$movie->title = Input::get('title');
 			$movie->writers = Input::get('writers');
 			$movie->year = Input::get('year');

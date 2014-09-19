@@ -51,10 +51,6 @@
 		{{ Form::label('cast') }}
 		{{ Form::textarea('cast', $movie->cast) }}
 	</p>
-
-	<p>
-		{{ Form::label('poster') }}
-		{{ Form::file('poster') }}
-	</p>
+	
 	{{ Form::submit('Update movie') }}
 {{ Form::close() }}

@@ -24,6 +24,7 @@
 @foreach($movies as $movie)
 	<li>
 		{{ $movie->title }}
+		{{ link_to_route('movies.show', 'Show', $movie->id) }}
 		{{ link_to_route('movies.edit', 'Edit', $movie->id) }}
 		{{ Form::open(array('method' => 'delete', 'route' => array('movies.destroy', $movie->id))) }}
 			{{ Form::submit('Delete') }}

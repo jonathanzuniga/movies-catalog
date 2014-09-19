@@ -18,7 +18,6 @@ class CreateMoviesTable extends Migration {
 			$table->string('director');
 			$table->string('duration');
 			$table->integer('genre_id');
-			$table->string('poster');
 			$table->string('title');
 			$table->string('writers');
 			$table->integer('year');
